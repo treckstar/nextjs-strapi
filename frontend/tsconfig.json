@@ -1,28 +1,30 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ESNext",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "paths": {
+      "@/*": ["./*"],
+      "tailwind-variants": ["./node_modules/tailwind-variants"]
+    },
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
     "incremental": true,
+    "jsx": "preserve",
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "strictNullChecks": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/LoadMorePosts.tsx", "src/app/blog-3/page.tsx", "src/app/[lang]/components/ErrorBoundry.jsx", "src/app/[lang]/components/ErrorBoundary.tsx", "src/app/global-error.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/LoadMorePosts.tsx", "app/blog-3/page.tsx", "app/[lang]/components/ErrorBoundry.jsx", "app/[lang]/components/ErrorBoundary.tsx", "app/global-error.tsx"],
   "exclude": ["node_modules"]
 }
